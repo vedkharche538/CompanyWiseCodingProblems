@@ -24,7 +24,7 @@ These problems involve deeper recursion, multiple branches, or state management�
 # Permutations
 Generate all possible permutations of an array or string (e.g., [1, 2, 3] → [1, 2, 3], [1, 3, 2], [2, 1, 3], etc.).
 Why it’s good: It introduces backtracking basics by exploring all possibilities.
-Combinations
+# Combinations
 Find all combinations of an array that sum to a target (e.g., [2, 3, 5] and target 8 → [3, 5]).
 Why it’s good: It builds on recursion with decision-making (include or exclude an element).
 Subsets
@@ -33,7 +33,7 @@ Why it’s good: It’s a classic recursive problem with branching choices.
 N-Queens Problem
 Place N queens on an NxN chessboard so no two attack each other.
 Why it’s good: It’s a great intro to backtracking with constraints.
-Binary Tree Path Sum
+# Binary Tree Path Sum
 Find all paths in a binary tree that sum to a given value.
 Why it’s good: It combines tree recursion with path tracking, a common interview pattern.
 Tip: Pay attention to how recursion branches (e.g., choosing an element or skipping it) and how to manage state. In backtracking, you’ll often need to “undo” choices after exploring a path.
