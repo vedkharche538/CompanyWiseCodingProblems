@@ -132,8 +132,8 @@ ascending order is rotated between 1 and n times.
 """
 search the element in rotated array
 """
-nums = [4, 5, 6, 7, 0, 1, 2]
-target = 10
+# nums = [4, 5, 6, 7, 0, 1, 2]
+# target = 10
 
 
 def search_rotate_array(nums, target):
@@ -154,20 +154,62 @@ def search_rotate_array(nums, target):
 
 
 ##
-arr = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
-max_w = 0
-num_zeros = 0
-k = 2
-n = len(arr)
-l = 0
-for r in range(len(arr)):
-    if arr[r] == 0:
-        num_zeros += 1
+# arr = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
+# max_w = 0
+# num_zeros = 0
+# k = 2
+# n = len(arr)
+# l = 0
+# for r in range(len(arr)):
+#     if arr[r] == 0:
+#         num_zeros += 1
 
-    while num_zeros > k:
-        if arr[l] == 0:
-            num_zeros -= 1
-        l += 1
-    w = r - l + 1
-    max_w = max(max_w, w)
-print(max_w)
+#     while num_zeros > k:
+#         if arr[l] == 0:
+#             num_zeros -= 1
+#         l += 1
+#     w = r - l + 1
+#     max_w = max(max_w, w)
+# print(max_w)
+
+
+
+###################################
+
+def count_find_4_in_digit(nums):
+    cnt = 0
+    for i in range(nums):
+        if '4' in str(i):
+            cnt +=1
+    return cnt
+
+# print(count_find_4_in_digit(3))
+
+from abc import ABC, abstractmethod
+
+class Polygon(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Rectangle(Polygon):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+class Triangle(Polygon):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    # def area(self):
+    #     return 0.5 * self.base * self.height
+
+# Example usage:
+rect = Rectangle(10, 20)
+tri = Triangle(10, 10)
+print("Rectangle Area:", rect.area())
+# print("Triangle Area:", tri.area())

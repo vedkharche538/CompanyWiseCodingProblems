@@ -36,3 +36,21 @@ print(group_anagram_optimized(str))
 
 # Time Complexity = O(n *k) where k is a length of each string in a list
 # Space Complexity = O(n * k)
+
+
+
+def test(arr):
+    grouped = []
+    while arr:
+        first = arr.pop(0)
+        s = set(first)
+        temp = [first]
+        j = 0
+        while j < len(arr):
+            if set(arr[j]) == s:
+                temp.append(arr.pop(j))
+            else:
+                j += 1
+        grouped.append(temp)
+    return grouped
+# print(test(str))
